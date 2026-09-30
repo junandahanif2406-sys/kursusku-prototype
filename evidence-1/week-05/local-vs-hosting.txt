@@ -1,0 +1,22 @@
+LOCAL VS HOSTING - PERTEMUAN 5
+Project : Kursusku-Prototype
+Nama Mahasiswa : Junanda Hanif
+Tanggal 30 September 2026
+
+Aspek           | Local Development                             Hosting / production                                Penjelasan singkat:            
+URL             | kursusku-prototype.test                     Domain atau subdomain publik                          Alamat unik yg diketikdi browser
+Lokasi File     | C:\laragon\www\kursusku-prototype           Direktori Pada server hosting                         Lokasi penyimpansn fisik source code
+Database        | MySQL laragon                               Database server yg di sediakan oleh hosting           Tempat penyimpanan seluruh data profesional
+Environment     | Development                                 Production                                            Status tahapan aplikasi masih coding
+HTTPS/SSL       | Tidak Selalu Tersedia                       Wajib Mrnggunakan HTTPS yg valid                      Standar keamanan untuk mengecek darta
+Debug           | Membantu Proses Belajar                     Eror dicatat dalam file log                           Mekanisme pelacakan  bug
+Secret          | Konfirmasi bawaan yg longgar                Diamankan menggunakan Environment Variabel            kredensial rahasia seperti password
+Document root   | Folder Project di laragon                   Folder root yang di ekspos ke publik server           Titik masuk utama
+
+Refleksi singkat:
+​1. Apa risiko jika prototype ini langsung diunggah ke hosting publik tanpa HTTPS?
+Data yang dikirimkan oleh pengunjung, seperti isian form pendaftaran kursus, akan dikirim dalam bentuk teks biasa (tidak terenkripsi). Ini sangat berisiko disadap oleh peretas di jaringan. Selain itu, browser akan memberikan peringatan "Not Secure" yang menurunkan kepercayaan pengunjung terhadap web KursusKu.
+​2. Bagian mana dari kode Anda (jika ada) yang masih menulis path lokal atau informasi yang tidak boleh dibagikan ke publik?
+Saya harus memastikan pemanggilan file seperti CSS dan gambar menggunakan path relatif (contoh: assets/css/style.css atau assets/images/hero-kursus.jpg), bukan path absolut yang mengarah langsung ke drive lokal komputer saya. Selain itu, jika nanti ada konfigurasi koneksi ke database MySQL, kredensial lokal Laragon (seperti username root tanpa password) tidak boleh ikut terunggah ke repositori publik di GitHub.
+​3. Apa perbedaan utama cara menangani error di local vs production menurut Anda?
+Di lingkungan lokal, menampilkan detail pesan error PHP sangat penting agar saya bisa mengetahui letak kesalahan kode dan memperbaikinya dengan cepat. Namun, di production (hosting), detail error tersebut wajib disembunyikan dan diganti dengan halaman pemberitahuan yang lebih ramah pengguna. Menampilkan error detail di production sama saja dengan membeberkan struktur direktori dan potensi celah

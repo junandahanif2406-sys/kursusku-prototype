@@ -1,0 +1,11 @@
+Test Matriks - PERTEMUAN 5
+Project             : Kursusku-prototype
+Nama Mahasiswa      : Junanda Hanif
+Tanggal Pengujian   : 30 September 2026
+
+[TC-01] Navigasi Header: Klik menu atas (Katalog, dll). Hasil: Layar otomatis scroll/pindah ke bagian yang tepat. [Pass]
+[TC-02] Link Tombol: Klik tombol Daftar & Estimasi Biaya. Hasil: Pindah halaman sukses tanpa error 404. [Pass]
+[TC-03] Tampilan Mobile: Cek web pakai mode HP (Inspect/F12). Hasil: Desain menyesuaikan layar, tidak ada yang terpotong. [Pass]
+[TC-04] Rumus Kalkulator: Ubah angka peserta di kode PHP. Hasil: Angka Subtotal & Total akhir terhitung dengan benar. [Pass]
+[TC-05] Logika Status: Ubah variabel $isActive = false di kode PHP. Hasil: Label status berubah menjadi merah/Non-aktif. [Pass]
+[TC-06] Validasi Form: Kosongkan isian wajib lalu klik Submit. Hasil: Muncul peringatan bahwa kolom wajib diisi. [Pass]

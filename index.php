@@ -24,37 +24,77 @@ $courses = [
   content="width=device-width, 
   initial-scale=1">
 
-  <link rel="stylesheet" href="assets/css/
-  style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <title><?= htmlspecialchars($siteName) ?></title>
 </head>
 
 <body> 
-  <header>
-    <nav aria-label="Navigasi utama"> <a href="index.php"> <strong><?= htmlspecialchars($siteName) ?></strong> </a> <a href="#keunggulan">Keunggulan</a> <a href="#katalog">Katalog</a> <a href="#alur">Cara Daftar</a> <a href="#kontak">Kontak</a> </nav>
-  </header>
-  <main>
-    <section id="hero">
-      <h1><?= htmlspecialchars($tagline) ?></h1>
-      <p> Temukan kursus teknologi yang relevan untuk meningkatkan keterampilan Anda. </p> <a href="#katalog"> Lihat Katalog Kursus </a>
-    <a href="fee-calculator.php">Lihat Estimasi Biaya</a>
-    </section>
-    <section id="keunggulan">
-      <h2>Mengapa Memilih KursusKu?</h2>
-      <article>
+  <header class="site-header">
+  <div class="container">
+    <div class="nav-wrap">
+      <nav aria-label="Navigasi utama"> 
+        <a href="index.php" class="brand"><?= htmlspecialchars($siteName) ?></a> 
+        <a href="index.php#katalog">Katalog</a>
+        <a href="registration.php">Daftar Kursus</a>
+        <a href="#keunggulan">Keunggulan</a> 
+        <a href="#alur">Cara Daftar</a> 
+        <a href="#kontak">Kontak</a> 
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <main class="container">
+    <!-- Hero Section Baru: Split Layout -->
+<section class="hero-modern">
+  <div class="container hero-wrapper">
+    <div class="hero-text">
+      <span class="badge">Pendaftaran Dibuka</span>
+      <h1>Tingkatkan Karir Digital Anda Bersama Kami</h1>
+      <p>Platform pembelajaran interaktif berbasis proyek dengan mentor profesional. Mulai perjalanan karir Anda dari nol hingga siap kerja.</p>
+      <div class="hero-actions">
+        <a href="#katalog" class="btn-primary">Lihat Katalog</a>
+        <a href="fee-calculator.php" class="btn-outline">Estimasi Biaya</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <!-- Anda bisa mengganti kotak ini dengan tag <img> nantinya -->
+      <img src="assets/images/hero-kursus.jpg" alt="Ilustrasi Belajar Kursus" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<!-- Keunggulan Section Baru: Icon Cards -->
+<section class="features-modern" id="keunggulan">
+  <div class="container">
+    <div class="section-header">
+      <h2>Nilai Tambah Program Kami</h2>
+      <p>Metode pembelajaran yang dirancang khusus untuk kesuksesan Anda.</p>
+    </div>
+    
+    <div class="features-grid">
+      <article class="feature-card">
+        <div class="feature-icon">🎯</div>
         <h3>Materi Terarah</h3>
-        <p> Materi disusun bertahap dari dasar hingga praktik. </p>
+        <p>Kurikulum disusun secara bertahap dari pemahaman dasar hingga implementasi praktik nyata.</p>
       </article>
-      <article>
-        <h3>Belajar dengan Proyek</h3>
-        <p> Setiap tahap menghasilkan bagian nyata dari aplikasi. </p>
+      
+      <article class="feature-card">
+        <div class="feature-icon">💻</div>
+        <h3>Belajar Berbasis Proyek</h3>
+        <p>Setiap tahapan belajar akan menghasilkan portofolio berupa aplikasi yang dapat berfungsi.</p>
       </article>
-      <article>
-        <h3>Pendampingan Praktik</h3>
-        <p> Mahasiswa belajar melalui demonstrasi, latihan, dan evaluasi. </p>
+      
+      <article class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <h3>Pendampingan Intensif</h3>
+        <p>Evaluasi rutin dan demonstrasi langsung untuk memastikan mahasiswa memahami setiap materi.</p>
       </article>
-    </section> 
+    </div>
+  </div>
+</section>
+
    <section id="katalog">
     <h2>Katalog Kursus</h2>
     <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%;">

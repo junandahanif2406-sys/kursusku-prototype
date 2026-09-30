@@ -1,0 +1,141 @@
+/* --- Kalkulator Bergaya Invoice --- */
+.calculator-card {
+  max-width: 600px;
+  margin: 3rem auto;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  padding: 2.5rem;
+  border-top: 5px solid var(--brand);
+}
+
+.card-header {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.badge-brand {
+  background: var(--soft);
+  color: var(--brand-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.course-info-box {
+  display: flex;
+  justify-content: space-between;
+  background: var(--soft);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.info-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.invoice-details {
+  margin-bottom: 2rem;
+}
+
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.header-row {
+  font-weight: 700;
+  color: var(--muted);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 0.5rem;
+}
+
+.subtotal-row {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  border-bottom: none;
+}
+
+.discount-row {
+  color: #dc2626; 
+}
+
+.total-row {
+  border-bottom: none;
+  border-top: 2px solid var(--text);
+  margin-top: 0.5rem;
+  padding-top: 1.2rem;
+  font-size: 1.2rem;
+}
+
+.total-amount {
+  color: var(--brand);
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.formula-box {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.formula-box h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.formula-box ul {
+  padding-left: 1.2rem;
+  margin-top: 0;
+}
