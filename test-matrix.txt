@@ -1,0 +1,85 @@
+TEST MATRIX PENGUJIAN PROGRAM KURSUSKU UIN
+===========================================
+
+No. 1
+Skenario Pengujian : Mahasiswa + Web Dasar + 1 paket
+Hasil yang Diharapkan : Rp240.000
+Hasil Aktual : Rp240.000
+Status : Berhasil
+
+
+No. 2
+Skenario Pengujian : Guru + PHP Dasar + 1 paket
+Hasil yang Diharapkan : Rp340.000
+Hasil Aktual : Rp340.000
+Status : Berhasil
+
+
+No. 3
+Skenario Pengujian : Umum + Laravel Dasar + 1 paket
+Hasil yang Diharapkan : Rp500.000
+Hasil Aktual : Rp500.000
+Status : Berhasil
+
+
+No. 4
+Skenario Pengujian : Mahasiswa + Web Dasar + 2 paket
+Hasil yang Diharapkan : Rp480.000
+Hasil Aktual : Rp480.000
+Status : Berhasil
+
+
+No. 5
+Skenario Pengujian : Nama kosong
+Hasil yang Diharapkan : Nama wajib diisi
+Hasil Aktual : Sesuai
+Status : Berhasil
+
+
+No. 6
+Skenario Pengujian : Email tidak valid
+Hasil yang Diharapkan : Format email tidak valid
+Hasil Aktual : Sesuai
+Status : Berhasil
+
+
+No. 7
+Skenario Pengujian : Tidak memilih minat
+Hasil yang Diharapkan : Tidak ada warning
+Hasil Aktual : Sesuai
+Status : Berhasil
+
+
+No. 8
+Skenario Pengujian : Memilih 3 minat
+Hasil yang Diharapkan : Semua 3 minat muncul
+Hasil Aktual : Sesuai
+Status : Berhasil
+
+
+No. 9
+Skenario Pengujian : Metode offline
+Hasil yang Diharapkan : Tatap Muka
+Hasil Aktual : Tatap Muka
+Status : Berhasil
+
+
+No. 10
+Skenario Pengujian : Metode hybrid
+Hasil yang Diharapkan : Hybrid
+Hasil Aktual : Hybrid
+Status : Berhasil
+
+
+No. 11
+Skenario Pengujian : Akses langsung process.php
+Hasil yang Diharapkan : Redirect ke register.php
+Hasil Aktual : Redirect
+Status : Berhasil
+
+
+No. 12
+Skenario Pengujian : Menambah fasilitas baru
+Hasil yang Diharapkan : Fasilitas baru muncul
+Hasil Aktual : Muncul
+Status : Berhasil

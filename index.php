@@ -1,18 +1,92 @@
-<?php $siteName = 'KursusKu UIN';
-$tagline = 'Belajar, daftar, dan kelola kursus dalam satu tempat.';
-$year = date('Y'); ?>
-
 <?php
+
+$siteName = 'KursusKu UIN';
+$tagline = 'Belajar, daftar, dan kelola kursus dalam satu tempat.';
+$year = date('Y');
+
 require_once __DIR__ . '/helpers.php';
 
+function rupiah(int $amount): string
+{
+    return 'Rp' . number_format($amount, 0, ',', '.');
+}
+
+function formatTanggal(string $date): string
+{
+    return date('d-m-Y', strtotime($date));
+}
+
+function sisaKursi(int $quota, int $registered): int
+{
+    return max(0, $quota - $registered);
+}
+
+function statusKursus(int $quota, int $registered): string
+{
+    $remaining = sisaKursi($quota, $registered);
+
+    if ($remaining <= 0) {
+        return 'Penuh';
+    }
+
+    if ($remaining <= 5) {
+        return 'Hampir Penuh';
+    }
+
+    return 'Tersedia';
+}
+
 $courses = [
-    ['code' => 'WEB-01', 'name' => 'Web Dasar', 'fee' => 200000, 'quota' => 30, 'registered' => 12, 'start_date' => '2026-09-21'],
-    ['code' => 'PHP-01', 'name' => 'PHP Dasar', 'fee' => 250000, 'quota' => 30, 'registered' => 18, 'start_date' => '2026-09-22'],
-    ['code' => 'PHP-02', 'name' => 'PHP Lanjutan', 'fee' => 300000, 'quota' => 25, 'registered' => 24, 'start_date' => '2026-09-24'],
-    ['code' => 'LAR-01', 'name' => 'Laravel Fundamental', 'fee' => 350000, 'quota' => 25, 'registered' => 25, 'start_date' => '2026-09-28'],
-    ['code' => 'DB-01', 'name' => 'MySQL Dasar', 'fee' => 275000, 'quota' => 20, 'registered' => 0, 'start_date' => '2026-10-01'],
-    ['code' => 'UI-01', 'name' => 'UI Web Dasar', 'fee' => 225000, 'quota' => 35, 'registered' => 9, 'start_date' => '2026-10-03'],
+    [
+        'code' => 'WEB-01',
+        'name' => 'Web Dasar',
+        'fee' => 200000,
+        'quota' => 30,
+        'registered' => 12,
+        'start_date' => '2026-09-21'
+    ],
+    [
+        'code' => 'PHP-01',
+        'name' => 'PHP Dasar',
+        'fee' => 250000,
+        'quota' => 30,
+        'registered' => 18,
+        'start_date' => '2026-09-22'
+    ],
+    [
+        'code' => 'PHP-02',
+        'name' => 'PHP Lanjutan',
+        'fee' => 300000,
+        'quota' => 25,
+        'registered' => 24,
+        'start_date' => '2026-09-24'
+    ],
+    [
+        'code' => 'LAR-01',
+        'name' => 'Laravel Fundamental',
+        'fee' => 350000,
+        'quota' => 25,
+        'registered' => 25,
+        'start_date' => '2026-09-28'
+    ],
+    [
+        'code' => 'DB-01',
+        'name' => 'MySQL Dasar',
+        'fee' => 275000,
+        'quota' => 20,
+        'registered' => 0,
+        'start_date' => '2026-10-01'
+    ],
+    [
+        'code' => 'UI-01',
+        'name' => 'UI Web Dasar',
+        'fee' => 225000,
+        'quota' => 35,
+        'registered' => 9,
+        'start_date' => '2026-10-03'
+    ],
 ];
+
 ?>
 
 <!doctype html>
@@ -36,7 +110,7 @@ $courses = [
       <nav aria-label="Navigasi utama"> 
         <a href="index.php" class="brand"><?= htmlspecialchars($siteName) ?></a> 
         <a href="index.php#katalog">Katalog</a>
-        <a href="registration.php">Daftar Kursus</a>
+        <a href="register.php">Daftar Kursus</a>
         <a href="#keunggulan">Keunggulan</a> 
         <a href="#alur">Cara Daftar</a> 
         <a href="#kontak">Kontak</a> 
