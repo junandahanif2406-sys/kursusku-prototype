@@ -97,17 +97,14 @@ if (!in_array(
     $errors[] = 'Jumlah paket tidak valid.';
 }
 
-
-// ==========================
 // JIKA ADA ERROR
-// ==========================
-
 if ($errors !== []) {
+    http_response_code(422);
     ?>
 
     <!doctype html>
     <html lang="id">
-
+    <!-- Tampilan pesan error-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport"
